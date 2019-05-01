@@ -40,6 +40,34 @@
     <p>Die Early-Bird-Tickets sind bis am 5. Mai 2019 erhältlich. Sichern Sie sich jetzt ein Ticket, die Plätze sind beschränkt!</p>
     <p><a href="https://tipo.ch/opendata" class="btn">Ticket buchen</a></p>
   </section>
+
+    <section>
+      <h2>Programm</h2>
+      <table class="program">
+        <thead>
+          <tr>
+  <!--           <th class="room"></th>
+            <th class="room"><div class="room-title">Saal 1</div><div class="room-people">30 Personen</div></th>
+            <th class="room"><div class="room-title">Saal 2</div><div class="room-people">30 Personen</div></th>
+            <th class="room"><div class="room-title">Saal 3</div><div class="room-people">30 Personen</div></th>
+            <th class="room"><div class="room-title">Saal 4</div><div class="room-people">30 Personen</div></th>
+   -->        </tr>
+        </thead>
+        <tbody>
+          {{ range $.Site.Data.timeTable }}
+             <tr class="{{ .type }}">
+               <th class="time">{{ .time }}</th>
+               <td colspan="4" class="session">
+                <div class="session-title">{{ .title }}</div>
+                <div class="session-description">{{ .description }}</div>
+               </td>
+             </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </section>
+
+  
   <section>
     <h1>Was ist eine Unconference?</h1>
     <h2>Warum braucht es ein neues Format?</h2></strong></p>
@@ -61,32 +89,6 @@
     </ol>
     <h2>Wie bereite ich mich vor?</h2>
     <p>Überlegen Sie sich vor dem Forum, welches Thema Sie gerne besprechen möchten und was es dazu für Materialien und Ressourcen gibt. Um mehr Leute auf dieses Thema aufmerksam zu machen, empfehlen wir, dieses auf ihren Kanälen zu teilen und mit Bekannten zu besprechen. Dadurch erhöhen Sie die Chance, dass ihr Thema am Forum gewählt und angegangen wird.</p>
-  </section>
-
-  <section>
-    <h2>Programm</h2>
-    <table class="program">
-      <thead>
-        <tr>
-<!--           <th class="room"></th>
-          <th class="room"><div class="room-title">Saal 1</div><div class="room-people">30 Personen</div></th>
-          <th class="room"><div class="room-title">Saal 2</div><div class="room-people">30 Personen</div></th>
-          <th class="room"><div class="room-title">Saal 3</div><div class="room-people">30 Personen</div></th>
-          <th class="room"><div class="room-title">Saal 4</div><div class="room-people">30 Personen</div></th>
- -->        </tr>
-      </thead>
-      <tbody>
-        {{ range $.Site.Data.timeTable }}
-           <tr class="{{ .type }}">
-             <th class="time">{{ .time }}</th>
-             <td colspan="4" class="session">
-              <div class="session-title">{{ .title }}</div>
-              <div class="session-description">{{ .description }}</div>
-             </td>
-           </tr>
-        {{ end }}
-      </tbody>
-    </table>
   </section>
 
   <section>
