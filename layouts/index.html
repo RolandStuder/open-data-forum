@@ -37,7 +37,7 @@
   </section>
   <section class="small">
     <h1>Jetzt Early-Bird-Tickets buchen!</h1>
-    <p>Die Early-Bird-Tickets sind bis am 30. April 2019 erhältlich. Sichern Sie sich jetzt ein Ticket, die Plätze sind beschränkt!</p>
+    <p>Die Early-Bird-Tickets sind bis am 5. Mai 2019 erhältlich. Sichern Sie sich jetzt ein Ticket, die Plätze sind beschränkt!</p>
     <p><a href="https://tipo.ch/opendata" class="btn">Ticket buchen</a></p>
   </section>
   <section>
@@ -62,29 +62,31 @@
     <h2>Wie bereite ich mich vor?</h2>
     <p>Überlegen Sie sich vor dem Forum, welches Thema Sie gerne besprechen möchten und was es dazu für Materialien und Ressourcen gibt. Um mehr Leute auf dieses Thema aufmerksam zu machen, empfehlen wir, dieses auf ihren Kanälen zu teilen und mit Bekannten zu besprechen. Dadurch erhöhen Sie die Chance, dass ihr Thema am Forum gewählt und angegangen wird.</p>
   </section>
-  <section id="programm">
+
+  <section>
     <h2>Programm</h2>
-    <h2>Wie sieht das Programm aus?</h2>
-<pre>08:45 - 09:15 Uhr   Generalversammlung (für Vereinsmitglieder)
-08:30 - 09:30 Uhr   Kaffee &amp; Croissants</pre>
-<pre>09:30 - 09:45 Uhr   Intro-Keynote von Charlotte Lindsey-Curtet, Director of Digital
-                    Transformation &amp; Data, International Committee of the Red Cross (ICRC)
-09:50 - 10:15 Uhr   Unconference-Programm gemeinsam definieren      
-    15 min.         Pause zur Gruppenwahl</pre>
-<pre>10:30 - 11:15 Uhr   Parallele Unconference-Sessions (4-5 Gruppen)        
-    15 min.         Pause zum Gruppenwechsel
-11:30 - 12:15 Uhr   Parallele Unconference-Sessions (4-5 Gruppen)</pre>
-<pre>12:15 - 12:30 Uhr   Manifest Zeremonie
-12:30 - 13:30 Uhr   Mittagessen</pre>
-<pre>13:30 - 13:35 Uhr   Unconference-Programm Update 
-10 min. Pause zur   Gruppenwahl</pre>
-<pre>13:45 - 14:30 Uhr   Parallele Unconference-Sessions (4-5 Gruppen)
-    15 min.         Pause zum Gruppenwechsel
-14:45 - 15:30 Uhr   Parallele Unconference-Sessions (4-5 Gruppen)
-    10 min.         Pause zum Wechsel ins Plenum</pre>
-<pre>15:45 - 16:00 Uhr   Outro-Keynote
-16:00 - 16:15 Uhr   Outro-Zusammenfassung
-16:15 -             Apéro</pre>
+    <table class="program">
+      <thead>
+        <tr>
+<!--           <th class="room"></th>
+          <th class="room"><div class="room-title">Saal 1</div><div class="room-people">30 Personen</div></th>
+          <th class="room"><div class="room-title">Saal 2</div><div class="room-people">30 Personen</div></th>
+          <th class="room"><div class="room-title">Saal 3</div><div class="room-people">30 Personen</div></th>
+          <th class="room"><div class="room-title">Saal 4</div><div class="room-people">30 Personen</div></th>
+ -->        </tr>
+      </thead>
+      <tbody>
+        {{ range $.Site.Data.timeTable }}
+           <tr class="{{ .type }}">
+             <th class="time">{{ .time }}</th>
+             <td colspan="4" class="session">
+              <div class="session-title">{{ .title }}</div>
+              <div class="session-description">{{ .description }}</div>
+             </td>
+           </tr>
+        {{ end }}
+      </tbody>
+    </table>
   </section>
 
   <section>

@@ -118,3 +118,32 @@ pre {
     transform: translateY(2px);
   }
 }
+
+table.program {
+  th, td {
+    vertical-align: top;
+    padding: 0.5rem;
+  }
+  td {
+    text-align: left;
+    background-color: #eee;
+    .room-people {
+      font-weight: normal;
+      font-size: 0.9rem;
+    }
+  }
+  .time {
+    white-space: nowrap;
+    text-align: left;
+    font-weight: normal;
+  }
+  .session-title {
+    font-weight: bold;
+  }
+
+  tr.break {
+    opacity: 0.5;
+    padding: 0.2;
+    font-size: 0.9rem;
+  }
+}
