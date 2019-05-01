@@ -1,5 +1,20 @@
+
+// Variables
+
+$accentColor: #E61414;
+
+// Definitions
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "M3MonoRegular", monospace;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+* {
+  box-sizing: border-box;
+  border-collapse: separate;
 }
 
 body {
@@ -11,6 +26,41 @@ body {
   padding: 1rem;
 }
 
+header {
+  margin: -1rem -1rem 2rem;
+  padding: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+
+  .logo {
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+  }
+  h1,h2 {
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    font-size: 4rem;
+    padding-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 80rem) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
+  }
+
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -18,7 +68,7 @@ main {
 
 section {
   flex: 1 1 auto;
-  border-top: 3px solid #E61414;
+  border-top: 3px solid $accentColor;
   margin: 1rem;
   width: 30rem;
   max-width: 80rem;
@@ -26,6 +76,11 @@ section {
   // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
   &.small {
     width: 15rem;
+  }
+
+  & > h1:first-child {
+    padding-top: 0.5rem;
+    margin-top: 0;
   }
 }
 
@@ -45,5 +100,21 @@ pre {
 #supporters {
   img {
     max-width: 300px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  color: white;
+  background-color: $accentColor;
+  text-decoration: none;
+  padding: 0.5rem 3rem;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  transition: transform  .2s; /* Animation */
+
+  &:hover {
+    background-color: darken($accentColor, 10%);
+    transform: translateY(2px);
   }
 }
