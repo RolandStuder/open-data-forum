@@ -19,53 +19,77 @@
   <div>
     <h1>Opendata.ch/2019 Forum </h1>
     <h2>4. Juli | Bern, Hauptsitz SBB</h2>
-    <p>Zusammen Verbindlichkeit schaffen.<br>Die Unconference zum Thema offene Daten</p>
+    <p>Zusammen Verbindlichkeit schaffen</p>
     <p><a href="https://tipo.ch/opendata" class="btn">Jetzt anmelden!</a></p>
   </div>
   
 
 </header>
+
+<div class="splash">
+  <h1>Die Unconference zu Open Data</h1>
+  <p>Opendata.ch/2019 ist die führende Konferenz der Schweiz rund um das Thema offene Daten. Zum neunten Mal bieten wir Raum für einen schweizweiten Austausch zu Open Data.</p>
+  <p>200 VertreterInnen aus Forschung, Wirtschaft, Verwaltung, Politik, Journalismus, IT und weiteren Gebieten.</p>
+  <p><strong>Zum ersten Mal organisieren wir dies als Unconference.</strong></p>
+  <div class="splash-info"><h2>4. Juli 2019</h2></div>
+  <div class="splash-info">
+    <h2>Hauptsitz SBB, in Bern</h2>
+    <p>Hilfikerstrasse 1<br>3000 Bern</p>
+  </div>
+  
+  
+</div>
+
 <main>
   <section>
-    <h1>Unconference / Barcamp zum Thema Offene Daten</h1>
-    <p>Opendata.ch/2019 ist die führende Konferenz der Schweiz rund um das Thema offene Daten. Zum neunten Mal bieten wir am 4. Juli in Bern Raum für einen schweizweiten Austausch zu Open Data, mit 200 VertreterInnen aus Forschung, Wirtschaft, Verwaltung, Politik, Journalismus, IT und weiteren Gebieten.</p>
-    <p><strong>Und dieses Jahr wagen wir etwas Neues: Die Konferenz organisieren wir als “Forum” oder auf Neudeutsch als &#8220;Unconference&#8221;.</strong></p>
-  </section>
-  <section class="small">
-    <h1>Keynote Referentin, Charlotte Lindsey-Curtet, ICRC</h1>
-    <p>Grosse Neuigkeiten: Als Keynote-Referentin am Vormittag haben wir <strong>Charlotte Lindsey-Curtet</strong>, Director of Digital Transformation and Data, <strong>International Committee of the Red Cross</strong> (ICRC), gewinnen können.</p>
-  </section>
-  <section class="small">
-    <h1>Jetzt Early-Bird-Tickets buchen!</h1>
-    <p>Die Early-Bird-Tickets sind bis am 5. Mai 2019 erhältlich. Sichern Sie sich jetzt ein Ticket, die Plätze sind beschränkt!</p>
-    <p><a href="https://tipo.ch/opendata" class="btn">Ticket buchen</a></p>
+    <h2>Sessions</h2>
+    <ul>
+      <li>Alle sind eingeladen eine Session zu gestalten.</li>
+      <li>Jede Session ist 45 Minuten und sollte zur Mitarbeit / Diskussion einladen.</li>
+      <li>Berücksicthtige unterschiedliche Levels bezüglich Vorkenntnissen.</li>
+    </ul>
+    <p><strong>Alle Sessions werden am Morgen gepitched und geplant.</strong></p>
   </section>
 
-    <section>
-      <h2>Programm</h2>
-      <table class="program">
-        <thead>
-          <tr>
-  <!--           <th class="room"></th>
-            <th class="room"><div class="room-title">Saal 1</div><div class="room-people">30 Personen</div></th>
-            <th class="room"><div class="room-title">Saal 2</div><div class="room-people">30 Personen</div></th>
-            <th class="room"><div class="room-title">Saal 3</div><div class="room-people">30 Personen</div></th>
-            <th class="room"><div class="room-title">Saal 4</div><div class="room-people">30 Personen</div></th>
-   -->        </tr>
-        </thead>
-        <tbody>
-          {{ range $.Site.Data.timeTable }}
-             <tr class="{{ .type }}">
-               <th class="time">{{ .time }}</th>
-               <td colspan="4" class="session">
-                <div class="session-title">{{ .title }}</div>
-                <div class="session-description">{{ .description }}</div>
-               </td>
-             </tr>
-          {{ end }}
-        </tbody>
-      </table>
-    </section>
+  <section>
+    <h2>Teilnahme</h2>
+    <ul>
+      <li>Komm mit offenen Ohren und inspiriere andere.</li>
+      <li>Teil Fotos und Beiträge auf Social Media und in Blogs or dokumentier die Konferenz auf andere Weise.</li>
+      <li>Trag zu Diskussion in den Session bei und teile deine Erfahrungen.</li>
+      <li>Oder gestalte eine eigene Session.</li>
+    </ul>
+    <p><strong>Es gibt keine Zuschauer, es gibt nur Teilnehmer.</strong></p>
+  </section>
+
+  <section class="full-width">
+    
+    <h2>Detailprogramm</h2>
+    <table class="program">
+      <thead>
+        <tr>
+<!--           <th class="room"></th>
+          <th class="room"><div class="room-title">Saal 1</div><div class="room-people">30 Personen</div></th>
+          <th class="room"><div class="room-title">Saal 2</div><div class="room-people">30 Personen</div></th>
+          <th class="room"><div class="room-title">Saal 3</div><div class="room-people">30 Personen</div></th>
+          <th class="room"><div class="room-title">Saal 4</div><div class="room-people">30 Personen</div></th>
+ -->        </tr>
+      </thead>
+      <tbody>
+        {{ range $.Site.Data.timeTable }}
+           <tr class="{{ .type }}">
+             <th class="time">{{ .time }}</th>
+             <td colspan="4" class="session">
+              <div class="session-title">{{ .title }}</div>
+              <div class="session-description">{{ .description }}</div>
+             </td>
+           </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </section>
+
+
 
   
   <section>

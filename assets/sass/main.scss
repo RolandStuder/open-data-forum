@@ -2,32 +2,49 @@
 // Variables
 
 $accentColor: #E61414;
+$headerFont: "M3MonoRegular", monospace;
+$contentFont: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Definitions
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "M3MonoRegular", monospace;
+p, ul {
+  margin-bottom: 0.5rem;
+  line-height: 125%;
 }
 
-p {
+ul {
+  list-style: none;
+}
+
+ul li:before {
+  content: "✔";
+  font-family: $contentFont;
+  color: $accentColor;
+  margin-left: -1rem;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+li {
   margin-bottom: 0.5rem;
 }
+
 * {
   box-sizing: border-box;
   border-collapse: separate;
 }
 
 body {
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+  border-top: 5px solid $accentColor;
+  font-family: $contentFont;
 }
 
 body {
   margin: 0;
-  padding: 1rem;
+  padding: 0;
 }
 
 header {
-  margin: -1rem -1rem 2rem;
   padding: 1rem;
   overflow: hidden;
   display: flex;
@@ -41,10 +58,11 @@ header {
   h1,h2 {
     padding: 0;
     margin: 0;
+    font-family: $headerFont
   }
   h1 {
     font-size: 4rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0rem;
   }
   h2 {
     font-size: 2rem;
@@ -61,26 +79,81 @@ header {
 
 }
 
+.splash {
+  max-width: 95%;
+  padding: 2rem;
+  background-color: darken($accentColor, 10%);
+  color: white;
+  width: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  margin-bottom: 2rem;
+  & > * {
+    max-width: 70rem;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-weight: bolder;
+    font-size: 4rem;
+    font-family: $contentFont
+  }
+  p {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 80rem) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
+  }
+
+
+
+  .splash-info {
+    text-align: right;
+    margin-top: 2rem;
+    h2, p {
+      margin: 0;
+    }
+  }
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 section {
+  &:before {
+    content: '';
+    width: 3rem;
+    height: 5px;
+    margin-left: -1rem;
+    background-color: $accentColor;
+    display: block;
+  }
+
   flex: 1 1 auto;
-  border-top: 3px solid $accentColor;
-  margin: 1rem;
   width: 30rem;
   max-width: 80rem;
-  // padding: 0 1rem 1rem;
-  // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+  padding: 1rem 2rem 1rem;
+
   &.small {
     width: 15rem;
   }
 
-  & > h1:first-child {
+  &.full-width {
+    width: 100%;
+  }
+
+
+  & > h1:first-child, h2:first-child {
     padding-top: 0.5rem;
     margin-top: 0;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -115,7 +188,10 @@ pre {
 
   &:hover {
     background-color: darken($accentColor, 10%);
-    transform: translateY(2px);
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(1px);
   }
 }
 
@@ -142,6 +218,7 @@ table.program {
   }
 
   tr.break {
+    display: none;
     opacity: 0.5;
     padding: 0.2;
     font-size: 0.9rem;
