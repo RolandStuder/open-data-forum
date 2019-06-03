@@ -1,0 +1,109 @@
++++
+
++++
+
+<section>
+    <h2>Sessions</h2>
+    <ul>
+      <li>Alle sind eingeladen eine Session zu gestalten.</li>
+      <li>Jede Session ist 45 Minuten und sollte zur Mitarbeit / Diskussion einladen.</li>
+      <li>Berücksicthtige unterschiedliche Levels bezüglich Vorkenntnissen.</li>
+    </ul>
+    <p><strong>Alle Sessions werden am Morgen gepitched und geplant.</strong></p>
+  </section>
+
+  <section>
+    <h2>Teilnahme</h2>
+    <ul>
+      <li>Komm mit offenen Ohren und inspiriere andere.</li>
+      <li>Teil Fotos und Beiträge auf Social Media und in Blogs or dokumentier die Konferenz auf andere Weise.</li>
+      <li>Trag zu Diskussion in den Session bei und teile deine Erfahrungen.</li>
+      <li>Oder gestalte eine eigene Session.</li>
+    </ul>
+    <p><strong>Es gibt keine Zuschauer, es gibt nur Teilnehmer.</strong></p>
+  </section>
+
+  <section class="full-width">
+    
+    <h2>Programm</h2>
+
+    <div id="session-grid">
+      {{info}}
+      {{error}}
+      <table class="program">
+        <tr v-for="entry in timeTable.body.feed.entry" :class="entry.gsx$type.$t">
+          <th class="time">{{ entry.gsx$time.$t }}</th>
+          <td v-if="entry.gsx$type.$t === 'plenum'" :colspan="rooms.length + 1" class="programm-plenum">{{ entry.gsx$mainroom.$t }}</td>
+          <template v-if="entry.gsx$type.$t != 'plenum'">
+            <td v-for="room in rooms" class="programm-session">
+              {{ entry["gsx$" + room.column].$t ? entry["gsx$" + room.column].$t : openSlotLabel }}
+            </td>
+          </template>
+        </tr>
+      </table>
+    </div>
+<!--     <table class="program">
+      <thead>
+        <tr>
+          <th class="room"></th>
+          <th class="room"><div class="room-title">Saal 1</div><div class="room-people">30 Personen</div></th>
+          <th class="room"><div class="room-title">Saal 2</div><div class="room-people">30 Personen</div></th>
+          <th class="room"><div class="room-title">Saal 3</div><div class="room-people">30 Personen</div></th>
+          <th class="room"><div class="room-title">Saal 4</div><div class="room-people">30 Personen</div></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $.Site.Data.timeTable }}
+           <tr class="{{ .type }}">
+             <th class="time">{{ .time }}</th>
+             <td colspan="4" class="session">
+              <div class="session-title">{{ .title }}</div>
+              <div class="session-description">{{ .description }}</div>
+             </td>
+           </tr>
+        {{ end }}
+      </tbody>
+    </table>
+ -->  </section>
+
+
+
+  
+
+  <section>
+    <h2>Wie können Sie das Forum unterstützen?</h2>
+    <ul>
+    <li><b>Erzählen Sie Ihren Netzwerken</b> von der Veranstaltung.</li>
+    <li><b>Sie möchten sich als freiwillige Helfer*in melden?</b> Kontaktieren Sie uns via <a href="mailto:info@opendata.ch">info@opendata.ch</a>, wir freuen uns über Ihre Unterstützung.</li>
+    <li><b>Werden Sie Partner des Forums und unterstützen Sie uns finanziell:</b> Melden Sie sich bei uns via <a href="mailto:info@opendata.ch">info@opendata.ch</a>, um weitere Informationen zu erhalten.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Veranstaltungsort</h2>
+    <p>Das diesjährige Forum findet im Hauptsitz der SBB (<span class="LrzXr">Hilfikerstrasse 1, 3014 Bern</span>) in Bern statt.</p>
+    <p>Da wir keine Parkplätze anbieten können, bitten wir Sie, mit dem Zug anzureisen. Die Zugstation lautet &#8220;Bern Wankdorf&#8221;.</p>
+    <p><a href="https://opendata.ch/wordpress/files/2019/03/201405_Wankdorf_Bern_05-9bb96daa2eeace2g0a82f82b38753112.jpg"><img class="alignnone wp-image-7420 size-medium" src="https://opendata.ch/wordpress/files/2019/03/201405_Wankdorf_Bern_05-9bb96daa2eeace2g0a82f82b38753112-e1553762065917-300x164.jpg" alt="" srcset="https://opendata.ch/wordpress/files/2019/03/201405_Wankdorf_Bern_05-9bb96daa2eeace2g0a82f82b38753112-e1553762065917-300x164.jpg 300w, https://opendata.ch/wordpress/files/2019/03/201405_Wankdorf_Bern_05-9bb96daa2eeace2g0a82f82b38753112-e1553762065917-768x420.jpg 768w, https://opendata.ch/wordpress/files/2019/03/201405_Wankdorf_Bern_05-9bb96daa2eeace2g0a82f82b38753112-e1553762065917-220x120.jpg 220w, https://opendata.ch/wordpress/files/2019/03/201405_Wankdorf_Bern_05-9bb96daa2eeace2g0a82f82b38753112-e1553762065917.jpg 794w" sizes="(max-width: 300px) 100vw, 300px" /></a> <a href="https://opendata.ch/wordpress/files/2019/03/Der-Hauptsitz-der-SBB-direkt-beim-Bahnhof-Bern-Wankdorf_SBB-CFF-FFS_21-8-14.jpg"><img class="alignnone size-medium wp-image-7423" src="https://opendata.ch/wordpress/files/2019/03/Der-Hauptsitz-der-SBB-direkt-beim-Bahnhof-Bern-Wankdorf_SBB-CFF-FFS_21-8-14-300x164.jpg" alt="" srcset="https://opendata.ch/wordpress/files/2019/03/Der-Hauptsitz-der-SBB-direkt-beim-Bahnhof-Bern-Wankdorf_SBB-CFF-FFS_21-8-14-300x164.jpg 300w, https://opendata.ch/wordpress/files/2019/03/Der-Hauptsitz-der-SBB-direkt-beim-Bahnhof-Bern-Wankdorf_SBB-CFF-FFS_21-8-14-768x420.jpg 768w, https://opendata.ch/wordpress/files/2019/03/Der-Hauptsitz-der-SBB-direkt-beim-Bahnhof-Bern-Wankdorf_SBB-CFF-FFS_21-8-14-1024x561.jpg 1024w, https://opendata.ch/wordpress/files/2019/03/Der-Hauptsitz-der-SBB-direkt-beim-Bahnhof-Bern-Wankdorf_SBB-CFF-FFS_21-8-14-220x120.jpg 220w, https://opendata.ch/wordpress/files/2019/03/Der-Hauptsitz-der-SBB-direkt-beim-Bahnhof-Bern-Wankdorf_SBB-CFF-FFS_21-8-14.jpg 1200w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+  </section>
+
+<p><a name="unterstützen"></a></p>
+
+<section id="supporters">
+  <h2>Wer unterstützt das Forum?</h2>
+  <p><a name="unterstützer"></a></p>
+  <p><strong>Host:</strong></p>
+  <p><a href="https://www.sbb.ch/de/"><img class="alignnone wp-image-7502" src="https://opendata.ch/wordpress/files/2019/03/SBB_POS_2F_RGB_100-300x34.jpg" alt="" srcset="https://opendata.ch/wordpress/files/2019/03/SBB_POS_2F_RGB_100-300x34.jpg 300w, https://opendata.ch/wordpress/files/2019/03/SBB_POS_2F_RGB_100-768x86.jpg 768w, https://opendata.ch/wordpress/files/2019/03/SBB_POS_2F_RGB_100-1024x115.jpg 1024w, https://opendata.ch/wordpress/files/2019/03/SBB_POS_2F_RGB_100-220x25.jpg 220w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+  <p><strong>Förderer:</strong></p>
+  <p><a href="https://www.meteoschweiz.admin.ch/home.html?tab=overview"><img class="alignleft wp-image-7498 size-medium" src="https://opendata.ch/wordpress/files/2019/03/Meteo_logo_Kombi_DE-300x155.png" alt=""srcset="https://opendata.ch/wordpress/files/2019/03/Meteo_logo_Kombi_DE-300x155.png 300w, https://opendata.ch/wordpress/files/2019/03/Meteo_logo_Kombi_DE-768x397.png 768w, https://opendata.ch/wordpress/files/2019/03/Meteo_logo_Kombi_DE-220x114.png 220w, https://opendata.ch/wordpress/files/2019/03/Meteo_logo_Kombi_DE.png 832w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+  <p><a href="https://www.bav.admin.ch/bav/de/home.html"><img class="alignnone wp-image-7527 size-medium" src="https://opendata.ch/wordpress/files/2019/03/BAV_d_CMYK_pos_hoch-300x114.png" alt="" srcset="https://opendata.ch/wordpress/files/2019/03/BAV_d_CMYK_pos_hoch-300x114.png 300w, https://opendata.ch/wordpress/files/2019/03/BAV_d_CMYK_pos_hoch-220x83.png 220w, https://opendata.ch/wordpress/files/2019/03/BAV_d_CMYK_pos_hoch.png 650w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+  <p>&nbsp;</p>
+  <p><a href="https://www.begasoft.ch/"><img class="wp-image-7519 alignleft" src="https://opendata.ch/wordpress/files/2019/03/begasoft_Logo_RGB-300x107.jpg" alt="" srcset="https://opendata.ch/wordpress/files/2019/03/begasoft_Logo_RGB-300x107.jpg 300w, https://opendata.ch/wordpress/files/2019/03/begasoft_Logo_RGB-768x275.jpg 768w, https://opendata.ch/wordpress/files/2019/03/begasoft_Logo_RGB-1024x366.jpg 1024w, https://opendata.ch/wordpress/files/2019/03/begasoft_Logo_RGB-220x79.jpg 220w" sizes="(max-width: 200px) 100vw, 200px" /></a><a href="https://www.nine.ch/de/home"><img class="alignnone wp-image-7533 size-full" src="https://opendata.ch/wordpress/files/2019/03/Nine_LogoClaim_RGB.png" alt="" width="250" height="78" srcset="https://opendata.ch/wordpress/files/2019/03/Nine_LogoClaim_RGB.png 250w, https://opendata.ch/wordpress/files/2019/03/Nine_LogoClaim_RGB-220x69.png 220w" sizes="(max-width: 250px) 100vw, 250px" /></a></p>
+  <p>&nbsp;</p>
+  <p><strong>Kommunikationspartner:</strong></p>
+  <p><a href="https://www.digitale-gesellschaft.ch/"><img class="alignleft wp-image-7432 size-medium" src="https://opendata.ch/wordpress/files/2019/03/Logo_DE_B-300x72.png" alt="" srcset="https://opendata.ch/wordpress/files/2019/03/Logo_DE_B-300x72.png 300w, https://opendata.ch/wordpress/files/2019/03/Logo_DE_B-768x185.png 768w, https://opendata.ch/wordpress/files/2019/03/Logo_DE_B-1024x247.png 1024w, https://opendata.ch/wordpress/files/2019/03/Logo_DE_B-220x53.png 220w" sizes="(max-width: 300px) 100vw, 300px" /></a><a href="https://www.ch-open.ch/"><img class="alignnone wp-image-7520" src="https://opendata.ch/wordpress/files/2019/03/logo_chopen_web_big-1-300x110.png" srcset="https://opendata.ch/wordpress/files/2019/03/logo_chopen_web_big-1-300x110.png 300w, https://opendata.ch/wordpress/files/2019/03/logo_chopen_web_big-1-768x281.png 768w, https://opendata.ch/wordpress/files/2019/03/logo_chopen_web_big-1-1024x375.png 1024w, https://opendata.ch/wordpress/files/2019/03/logo_chopen_web_big-1-220x81.png 220w, https://opendata.ch/wordpress/files/2019/03/logo_chopen_web_big-1.png 1600w" sizes="(max-width: 260px) 100vw, 260px" /></a></p>
+          
+
+                                  <ul class="skillList clearfix"></ul>  
+                
+                  
+        </div>

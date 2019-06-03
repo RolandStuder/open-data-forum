@@ -172,9 +172,11 @@ pre {
 }
 
 table.program {
+  border-spacing: 3px;
+
   th, td {
     vertical-align: top;
-    padding: 0.5rem;
+    padding: 0.8rem;
   }
   td {
     text-align: left;
@@ -184,14 +186,22 @@ table.program {
       font-size: 0.9rem;
     }
   }
+
   .time {
     white-space: nowrap;
     text-align: left;
     font-weight: normal;
   }
-  .session-title {
+
+  .programm-session {
+    background-color: white;
+    border: 2px solid #eee;
+  }
+
+  .programm-plenum {
     font-weight: bold;
   }
+  
 
   tr.break {
     display: none;
