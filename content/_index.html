@@ -31,6 +31,12 @@
       {{info}}
       {{error}}
       <table class="program">
+        <tr>
+          <th></th>
+          <th v-for="room in rooms">
+            {{room.name}}
+          </th>
+        </tr>
         <tr v-for="entry in timeTable.body.feed.entry" :class="entry.gsx$type.$t">
           <th class="time">{{ entry.gsx$time.$t }}</th>
           <td v-if="entry.gsx$type.$t === 'plenum'" :colspan="rooms.length + 1" class="programm-plenum">{{ entry.gsx$mainroom.$t }}</td>
