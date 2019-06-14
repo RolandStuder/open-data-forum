@@ -1,32 +1,39 @@
-<table class="program">
-  <thead>
-    <tr>
-      <th class="room"></th>
-      {{ range $.Site.Data.timeTable.rooms }}
-      <th class="room">{{ . }}</th>
+<section class="full-width">
+  <table class="program">
+    <style type="text/css" scoped>
+      {{ range $index, $room :=$.Site.Data.timeTable.rooms }}
+        .programm-session:nth-of-type({{add $index 1}}) a:before { content: '{{$room}}'; }
       {{ end }}
-    </tr>
-  </thead>
-  <tbody>
-    {{ range $.Site.Data.timeTable.slots }}
-      <tr class="{{ .type }}">
-      <th class="time">{{ .time}}</th>
-        {{ if eq .type "sessions" }}
-          {{ range .dribdatIds }}
-            <td class="programm-session" id="session-{{.}}">
-              <a href="" class="programm-session-link">
-                <div class="programm-session-title"></div>
-                <div class="programm-session-description"></div>
-              </a>
-            </td>
-          {{ end }}
-        {{ else }}
-      <td colspan="4">
-        <strong>{{ .title }}</strong>
-        {{ .description }}
-      </td>
-      {{ end }}
-    </tr>
-  {{ end }}
-</tbody>
-</table>
+    </style>
+    <thead>
+  <!--     <tr>
+        <th class="room"></th>
+        {{ range $.Site.Data.timeTable.rooms }}
+        <th class="room">{{ . }}</th>
+        {{ end }}
+      </tr>
+   -->  </thead>
+    <tbody>
+      {{ range $.Site.Data.timeTable.slots }}
+        <tr class="{{ .type }}">
+        <th class="time">{{ .time}}</th>
+          {{ if eq .type "sessions" }}
+            {{ range .dribdatIds }}
+              <td class="programm-session" id="session-{{.}}">
+                <a href="" class="programm-session-link">
+                  <div class="programm-session-title"></div>
+                  <div class="programm-session-description"></div>
+                </a>
+              </td>
+            {{ end }}
+          {{ else }}
+        <td colspan="4">
+          <strong>{{ .title }}</strong>
+          {{ .description }}
+        </td>
+        {{ end }}
+      </tr>
+    {{ end }}
+  </tbody>
+  </table>
+</section>
