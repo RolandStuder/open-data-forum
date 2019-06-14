@@ -1,69 +1,81 @@
--
-  time: 08:45 - 09:15
-  title: Generalversammlung (für Vereinsmitglieder)
--
-  time: 08:30 - 09:30
-  title: Kaffe & Croissants
-- 
-  time: 09:30 - 09:45
-  title: Keynote
-  description: Intro-Keynote von Charlotte Lindsey-Curtet, Director of Digital Transformation &amp; Data, International Committee of the Red Cross (ICRC)
-- 
-  time: 09:50 - 10:15
-  title: Session Planning
-  description: Unconference-Programm gemeinsam definieren, mögliche Session werden vorgestellt.
--
-  time: 15 min.
-  title: Pause zur Gruppenwahl
-  type: break
--
-  time: 10:30 - 11:15
-  title: Parallele Unconference-Sessions (4-5 Gruppen)
-  type: sessions
--
-  time: 15 min.
-  title: Pause zur Gruppenwahl
-  type: break
--
-  time: 11:30 - 12:15
-  title: Parallele Unconference-Sessions (4-5 Gruppen)
-  type: sessions
--
-  time: 12:15 - 12:30
-  title: Manifest Zeremonie
--
-  time: 12:30 - 13:30
-  title: Mittagessen
-  type: break
--
-  time: 13:30 - 13:35
-  title: Unconference-Programm Update
--
-  time: 10 min.
-  title: Pause zur Gruppenwahl
-  type: break
--
-  time: 13:45 - 14:30
-  title: Parallele Unconference-Sessions (4-5 Gruppen)
-  type: sessions
--
-  time: 15 min.
-  title: Pause zur Gruppenwahl
-  type: break
--
-  time: 14:45 - 15:30
-  title: Parallele Unconference-Sessions (4-5 Gruppen)
-  type: sessions
-- 
-  time: 10min
-  title: Pause zum Wechsel ins Plenum
-  type: break
--
-  time: 15:45 - 16:00
-  title: Outro-Keynote
--
-  time: 16:00 - 16:15
-  title: Outro-Zusammenfassung
-- 
-  time: 16:15
-  title: Apéro
+rooms:
+  - Raum 1
+  - Raum 2
+  - Raum 3
+  - Raum 4
+
+slots:
+  -
+    time: 08:45 - 09:15
+    title: Generalversammlung (für Vereinsmitglieder)
+  -
+    time: 08:30 - 09:30
+    title: Kaffe & Croissants
+  - 
+    time: 09:30 - 09:45
+    title: Keynote
+    description: Intro-Keynote von Charlotte Lindsey-Curtet, Director of Digital Transformation &amp; Data, International Committee of the Red Cross (ICRC)
+  - 
+    time: 09:50 - 10:15
+    title: Session Planning
+    description: Unconference-Programm gemeinsam definieren, mögliche Session werden vorgestellt.
+  -
+    time: 15 min.
+    title: Pause zur Gruppenwahl
+    type: break
+  -
+    time: 10:30 - 11:15
+    title: Parallele Unconference-Sessions (4-5 Gruppen)
+    type: sessions
+    dribdatIds:
+      - 365
+      - 366
+      - 367
+      - 368
+  -
+    time: 15 min.
+    title: Pause zur Gruppenwahl
+    type: break
+  -
+    time: 11:30 - 12:15
+    title: Parallele Unconference-Sessions (4-5 Gruppen)
+    type: sessions
+  -
+    time: 12:15 - 12:30
+    title: Manifest Zeremonie
+  -
+    time: 12:30 - 13:30
+    title: Mittagessen
+    type: break
+  -
+    time: 13:30 - 13:35
+    title: Unconference-Programm Update
+  -
+    time: 10 min.
+    title: Pause zur Gruppenwahl
+    type: break
+  -
+    time: 13:45 - 14:30
+    title: Parallele Unconference-Sessions (4-5 Gruppen)
+    type: sessions
+  -
+    time: 15 min.
+    title: Pause zur Gruppenwahl
+    type: break
+  -
+    time: 14:45 - 15:30
+    title: Parallele Unconference-Sessions (4-5 Gruppen)
+    type: sessions
+  - 
+    time: 10min
+    title: Pause zum Wechsel ins Plenum
+    type: break
+  -
+    time: 15:45 - 16:00
+    title: Outro-Keynote
+  -
+    time: 16:00 - 16:15
+    title: Outro-Zusammenfassung
+  - 
+    time: 16:15
+    title: Apéro

@@ -196,6 +196,13 @@ table.program {
   .programm-session {
     background-color: white;
     border: 2px solid #eee;
+
+    a {
+      text-decoration: none;
+    }
+    .programm-session-title {
+      font-weight: bold;
+    }
   }
 
   .programm-plenum {

@@ -20,28 +20,24 @@
     <h1>Opendata.ch/2019 Forum </h1>
     <h2>4. Juli | Bern, Hauptsitz SBB</h2>
     <p>Zusammen Verbindlichkeit schaffen</p>
-    <p><a href="https://tipo.ch/opendata" class="btn">Jetzt anmelden!</a></p>
-  </div>
+<!--     <p><a href="https://tipo.ch/opendata" class="btn">Jetzt anmelden!</a></p>
+ -->  </div>
   </header>
 
 </div>
 
 <main>
-  
+  {{ partial "session_grid.html" . }}  
   {{.Content}}
+</main>
       
 
   
-  <footer>
+  <footer class="full-width">
     <section>
       <p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/ch/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/ch/80x15.png" /></a><a href="http://opendata.ch" rel="cc:attributionURL">opendata.ch</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/ch/deed.en_US">Creative Commons Attribution 3.0 Switzerland License</a>.</p>
     </section>
   </footer>
-
-  
-
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.js"></script>
   
   {{ $javascript := resources.Get "javascript/session_grid.js" }}
   <script src="{{ $javascript.Permalink }}"></script>
